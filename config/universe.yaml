@@ -1,0 +1,64 @@
+# Initial data universe: 40 US-listed companies across six sectors.
+#
+# cik values were written from the author's knowledge and are NOT trusted until
+# `python -m src.ingestion.run` checks each (ticker, cik) pair against SEC's
+# company_tickers.json. Mismatches are recorded (companies.universe_verified = false)
+# and raised by quality rule DQ006 as a critical confirmed error.
+#
+# lei / figi are intentionally null: they are only recorded after GLEIF / OpenFIGI
+# lookups return supporting evidence (see company_identifiers.verification_status).
+# Filling them in here by hand would count as "configured_unverified" only.
+
+defaults:
+  concepts: [revenue, net_income, total_assets]
+
+companies:
+  # ---- Technology
+  - {ticker: "AAPL",  name: "Apple Inc.",                    cik: 320193,  sector: "Technology",       lei: null, figi: null}
+  - {ticker: "MSFT",  name: "Microsoft Corporation",         cik: 789019,  sector: "Technology",       lei: null, figi: null}
+  - {ticker: "NVDA",  name: "NVIDIA Corporation",            cik: 1045810, sector: "Technology",       lei: null, figi: null}
+  - {ticker: "GOOGL", name: "Alphabet Inc.",                 cik: 1652044, sector: "Technology",       lei: null, figi: null}
+  - {ticker: "META",  name: "Meta Platforms, Inc.",          cik: 1326801, sector: "Technology",       lei: null, figi: null}
+  - {ticker: "ORCL",  name: "Oracle Corporation",            cik: 1341439, sector: "Technology",       lei: null, figi: null}
+  - {ticker: "INTC",  name: "Intel Corporation",             cik: 50863,   sector: "Technology",       lei: null, figi: null}
+  - {ticker: "CSCO",  name: "Cisco Systems, Inc.",           cik: 858877,  sector: "Technology",       lei: null, figi: null}
+  # ---- Healthcare
+  - {ticker: "JNJ",   name: "Johnson & Johnson",             cik: 200406,  sector: "Healthcare",       lei: null, figi: null}
+  - {ticker: "PFE",   name: "Pfizer Inc.",                   cik: 78003,   sector: "Healthcare",       lei: null, figi: null}
+  - {ticker: "MRK",   name: "Merck & Co., Inc.",             cik: 310158,  sector: "Healthcare",       lei: null, figi: null}
+  - {ticker: "UNH",   name: "UnitedHealth Group Incorporated", cik: 731766, sector: "Healthcare",      lei: null, figi: null}
+  - {ticker: "ABT",   name: "Abbott Laboratories",           cik: 1800,    sector: "Healthcare",       lei: null, figi: null}
+  - {ticker: "LLY",   name: "Eli Lilly and Company",         cik: 59478,   sector: "Healthcare",       lei: null, figi: null}
+  # ---- Financials
+  - {ticker: "JPM",   name: "JPMorgan Chase & Co.",          cik: 19617,   sector: "Financials",       lei: null, figi: null}
+  - {ticker: "BAC",   name: "Bank of America Corporation",   cik: 70858,   sector: "Financials",       lei: null, figi: null}
+  - {ticker: "WFC",   name: "Wells Fargo & Company",         cik: 72971,   sector: "Financials",       lei: null, figi: null}
+  - {ticker: "GS",    name: "The Goldman Sachs Group, Inc.", cik: 886982,  sector: "Financials",       lei: null, figi: null}
+  - {ticker: "MS",    name: "Morgan Stanley",                cik: 895421,  sector: "Financials",       lei: null, figi: null}
+  - {ticker: "V",     name: "Visa Inc.",                     cik: 1403161, sector: "Financials",       lei: null, figi: null}
+  - {ticker: "MA",    name: "Mastercard Incorporated",       cik: 1141391, sector: "Financials",       lei: null, figi: null}
+  # ---- Consumer
+  - {ticker: "KO",    name: "The Coca-Cola Company",         cik: 21344,   sector: "Consumer Staples", lei: null, figi: null}
+  - {ticker: "PEP",   name: "PepsiCo, Inc.",                 cik: 77476,   sector: "Consumer Staples", lei: null, figi: null}
+  - {ticker: "PG",    name: "The Procter & Gamble Company",  cik: 80424,   sector: "Consumer Staples", lei: null, figi: null}
+  - {ticker: "WMT",   name: "Walmart Inc.",                  cik: 104169,  sector: "Consumer Staples", lei: null, figi: null}
+  - {ticker: "COST",  name: "Costco Wholesale Corporation",  cik: 909832,  sector: "Consumer Staples", lei: null, figi: null}
+  - {ticker: "MCD",   name: "McDonald's Corporation",        cik: 63908,   sector: "Consumer Discretionary", lei: null, figi: null}
+  - {ticker: "NKE",   name: "NIKE, Inc.",                    cik: 320187,  sector: "Consumer Discretionary", lei: null, figi: null}
+  - {ticker: "HD",    name: "The Home Depot, Inc.",          cik: 354950,  sector: "Consumer Discretionary", lei: null, figi: null}
+  # ---- Industrials
+  - {ticker: "CAT",   name: "Caterpillar Inc.",              cik: 18230,   sector: "Industrials",      lei: null, figi: null}
+  - {ticker: "BA",    name: "The Boeing Company",            cik: 12927,   sector: "Industrials",      lei: null, figi: null}
+  - {ticker: "HON",   name: "Honeywell International Inc.",  cik: 773840,  sector: "Industrials",      lei: null, figi: null}
+  - {ticker: "MMM",   name: "3M Company",                    cik: 66740,   sector: "Industrials",      lei: null, figi: null}
+  - {ticker: "LMT",   name: "Lockheed Martin Corporation",   cik: 936468,  sector: "Industrials",      lei: null, figi: null}
+  - {ticker: "UPS",   name: "United Parcel Service, Inc.",   cik: 1090727, sector: "Industrials",      lei: null, figi: null}
+  # ---- Energy
+  # XOM removed: live check (2026-10-17) showed SEC's ticker file now maps XOM to a successor holding company
+  # (CIK 2115436, "ExxonMobil Holdings Corp") while historical facts sit under CIK 34088. Reinstate once the
+  # successor/predecessor relationship is modelled. Evidence: data/reference_5co_xom_finding.duckdb (DQ006).
+  - {ticker: "EOG",   name: "EOG Resources, Inc.",           cik: 821189,  sector: "Energy",           lei: null, figi: null}
+  - {ticker: "CVX",   name: "Chevron Corporation",           cik: 93410,   sector: "Energy",           lei: null, figi: null}
+  - {ticker: "COP",   name: "ConocoPhillips",                cik: 1163165, sector: "Energy",           lei: null, figi: null}
+  - {ticker: "SLB",   name: "Schlumberger Limited",          cik: 87347,   sector: "Energy",           lei: null, figi: null}
+  - {ticker: "OXY",   name: "Occidental Petroleum Corporation", cik: 797468, sector: "Energy",         lei: null, figi: null}

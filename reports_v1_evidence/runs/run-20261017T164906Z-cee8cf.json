@@ -1,0 +1,2149 @@
+{
+  "run": {
+    "run_id": "run-20261017T164906Z-cee8cf",
+    "run_timestamp": "2026-10-17T16:49:06",
+    "git_commit": null,
+    "dataset_snapshot": "9255028dc22c0e5c",
+    "model_id": "mock-reference",
+    "agent_profile": "mock",
+    "prompt_version": "mock-v1",
+    "evaluation_config": "{\"calibration_bins\":10,\"high_confidence_threshold\":0.8,\"relative_tolerance\":0.005}",
+    "test_suite_version": "v1-s42-n20-a2690923",
+    "mode": "smoke",
+    "n_cases": 24,
+    "status": "completed",
+    "execution_json": "{\"duration_seconds\": 0.282, \"agent_errors\": 0, \"provider_unavailable\": 0, \"token_usage\": null, \"estimated_cost_usd\": null}",
+    "validation_run_id": "val-20261017T164843Z-8d1ae3"
+  },
+  "execution": {
+    "duration_seconds": 0.282,
+    "agent_errors": 0,
+    "provider_unavailable": 0,
+    "token_usage": null,
+    "estimated_cost_usd": null
+  },
+  "metrics": {
+    "total": 24,
+    "passed": 24,
+    "accuracy": 1.0,
+    "by_category": {
+      "CLEAN_CONTROL": {
+        "n": 4,
+        "passed": 4,
+        "accuracy": 1.0,
+        "detection_precision": null,
+        "detection_recall": null,
+        "detection_f1": null
+      },
+      "CONTRADICTION": {
+        "n": 4,
+        "passed": 4,
+        "accuracy": 1.0,
+        "detection_precision": 1.0,
+        "detection_recall": 1.0,
+        "detection_f1": 1.0
+      },
+      "ID_MISMAP": {
+        "n": 4,
+        "passed": 4,
+        "accuracy": 1.0,
+        "detection_precision": 1.0,
+        "detection_recall": 1.0,
+        "detection_f1": 1.0
+      },
+      "MISSING_DATA": {
+        "n": 4,
+        "passed": 4,
+        "accuracy": 1.0,
+        "detection_precision": 1.0,
+        "detection_recall": 1.0,
+        "detection_f1": 1.0
+      },
+      "PERIOD_SHIFT": {
+        "n": 4,
+        "passed": 4,
+        "accuracy": 1.0,
+        "detection_precision": 1.0,
+        "detection_recall": 1.0,
+        "detection_f1": 1.0
+      },
+      "SCALE_ERROR": {
+        "n": 4,
+        "passed": 4,
+        "accuracy": 1.0,
+        "detection_precision": 1.0,
+        "detection_recall": 1.0,
+        "detection_f1": 1.0
+      }
+    },
+    "detection": {
+      "tp": 20,
+      "fp": 0,
+      "fn": 0,
+      "tn": 4,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "false_positive_rate": 0.0,
+    "abstention": {
+      "cases_requiring_abstention": 6,
+      "abstention_recall": 1.0,
+      "abstention_precision": 1.0,
+      "answered_correctly_when_evidence_adequate": 1.0,
+      "incorrect_abstention_rate": 0.0,
+      "invented_values_when_abstention_required": 0
+    },
+    "calibration": {
+      "n": 24,
+      "bins": [
+        {
+          "lo": 0.0,
+          "hi": 0.1,
+          "n": 0,
+          "mean_confidence": null,
+          "accuracy": null
+        },
+        {
+          "lo": 0.1,
+          "hi": 0.2,
+          "n": 0,
+          "mean_confidence": null,
+          "accuracy": null
+        },
+        {
+          "lo": 0.2,
+          "hi": 0.3,
+          "n": 0,
+          "mean_confidence": null,
+          "accuracy": null
+        },
+        {
+          "lo": 0.3,
+          "hi": 0.4,
+          "n": 0,
+          "mean_confidence": null,
+          "accuracy": null
+        },
+        {
+          "lo": 0.4,
+          "hi": 0.5,
+          "n": 0,
+          "mean_confidence": null,
+          "accuracy": null
+        },
+        {
+          "lo": 0.5,
+          "hi": 0.6,
+          "n": 0,
+          "mean_confidence": null,
+          "accuracy": null
+        },
+        {
+          "lo": 0.6,
+          "hi": 0.7,
+          "n": 2,
+          "mean_confidence": 0.6,
+          "accuracy": 1.0
+        },
+        {
+          "lo": 0.7,
+          "hi": 0.8,
+          "n": 0,
+          "mean_confidence": null,
+          "accuracy": null
+        },
+        {
+          "lo": 0.8,
+          "hi": 0.9,
+          "n": 6,
+          "mean_confidence": 0.86,
+          "accuracy": 1.0
+        },
+        {
+          "lo": 0.9,
+          "hi": 1.0,
+          "n": 16,
+          "mean_confidence": 0.925,
+          "accuracy": 1.0
+        }
+      ],
+      "brier": 0.022583333333333334,
+      "ece": 0.11833333333333329,
+      "note": "Agent confidence is self-reported and NOT a statistically validated probability."
+    },
+    "high_confidence_wrong": {
+      "threshold": 0.8,
+      "count": 0,
+      "cases": []
+    },
+    "rubric": {
+      "evidence_relevance": 1.0,
+      "factual_consistency": 1.0,
+      "reasoning_completeness": 1.0
+    },
+    "evidence_completeness": 1.0,
+    "root_causes": [],
+    "severity": {
+      "failures_by_severity": {},
+      "weighted_failure_score": 0
+    },
+    "ranked_failures": []
+  },
+  "results": [
+    {
+      "case_id": "case-0401089b0604",
+      "category": "MISSING_DATA",
+      "subtype": "unverifiable_period",
+      "severity": "medium",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "insufficient_evidence"
+        ],
+        "expected_issue_types": [
+          "missing_input"
+        ],
+        "should_abstain": true,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": null
+      },
+      "response": {
+        "case_id": "case-0401089b0604",
+        "status": "insufficient_evidence",
+        "answer": "No reference observation available for this period.",
+        "normalized_value": null,
+        "unit": null,
+        "company_identifier": "0001326801",
+        "fiscal_period": "2024-12-31",
+        "confidence": 0.85,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-0c01ad1947",
+            "value": 164501000000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0001326801",
+            "value": null,
+            "detail": "ticker/name resolves to Meta Platforms, Inc. (CIK 0001326801)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0001326801",
+            "value": null,
+            "detail": "cik resolves to Meta Platforms, Inc. (CIK 0001326801)"
+          }
+        ],
+        "explanation": "The reference store has no revenue observation for META period ending 2024-12-31; the record cannot be verified.",
+        "detected_issue_types": [
+          "missing_input"
+        ],
+        "recommended_action": "Request the source filing or abstain from using this value."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": null,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": true,
+        "abstain_expected": true,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 3
+    },
+    {
+      "case_id": "case-1d42f4af0a88",
+      "category": "MISSING_DATA",
+      "subtype": "missing_value",
+      "severity": "medium",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "insufficient_evidence"
+        ],
+        "expected_issue_types": [
+          "missing_input"
+        ],
+        "should_abstain": true,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": null
+      },
+      "response": {
+        "case_id": "case-1d42f4af0a88",
+        "status": "insufficient_evidence",
+        "answer": "No reference observation available for this period.",
+        "normalized_value": null,
+        "unit": null,
+        "company_identifier": "0000018230",
+        "fiscal_period": "2022-12-31",
+        "confidence": 0.85,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-f08245012a",
+            "value": null,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000018230",
+            "value": null,
+            "detail": "ticker/name resolves to Caterpillar Inc. (CIK 0000018230)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000018230",
+            "value": null,
+            "detail": "cik resolves to Caterpillar Inc. (CIK 0000018230)"
+          }
+        ],
+        "explanation": "The reference store has no net_income observation for CAT period ending 2022-12-31; the record cannot be verified.",
+        "detected_issue_types": [
+          "missing_input"
+        ],
+        "recommended_action": "Request the source filing or abstain from using this value."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": null,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": true,
+        "abstain_expected": true,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 3
+    },
+    {
+      "case_id": "case-1e5409fa1c06",
+      "category": "CLEAN_CONTROL",
+      "subtype": "valid_record",
+      "severity": "low",
+      "smoke": true,
+      "expected": {
+        "is_error": false,
+        "expected_statuses": [
+          "verified"
+        ],
+        "expected_issue_types": [],
+        "should_abstain": false,
+        "expected_value": 11812000000.0,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0000858877"
+      },
+      "response": {
+        "case_id": "case-1e5409fa1c06",
+        "status": "verified",
+        "answer": "Value matches the reference observation.",
+        "normalized_value": 11812000000.0,
+        "unit": "USD",
+        "company_identifier": "0000858877",
+        "fiscal_period": "2022-07-30",
+        "confidence": 0.97,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-659ac1931b",
+            "value": 11812000000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000858877",
+            "value": null,
+            "detail": "ticker/name resolves to Cisco Systems, Inc. (CIK 0000858877)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000858877",
+            "value": null,
+            "detail": "cik resolves to Cisco Systems, Inc. (CIK 0000858877)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "6fb45506ab2d1662a417bd95",
+            "value": 11812000000.0,
+            "detail": "SEC 10-K 0000858877-24-000017 filed 2024-09-05"
+          }
+        ],
+        "explanation": "After unit normalization the value equals the SEC-reported net_income for the period within 0.5%.",
+        "detected_issue_types": [],
+        "recommended_action": "No action required."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": true,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": false,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 5
+    },
+    {
+      "case_id": "case-21f20ef96f24",
+      "category": "CLEAN_CONTROL",
+      "subtype": "valid_thousands_label",
+      "severity": "low",
+      "smoke": true,
+      "expected": {
+        "is_error": false,
+        "expected_statuses": [
+          "verified"
+        ],
+        "expected_issue_types": [],
+        "should_abstain": false,
+        "expected_value": 15119000000.0,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0000200406"
+      },
+      "response": {
+        "case_id": "case-21f20ef96f24",
+        "status": "verified",
+        "answer": "Value matches the reference observation.",
+        "normalized_value": 15119000000.0,
+        "unit": "USD",
+        "company_identifier": "0000200406",
+        "fiscal_period": "2019-12-29",
+        "confidence": 0.97,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-959a810757",
+            "value": 15119000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000200406",
+            "value": null,
+            "detail": "ticker/name resolves to Johnson & Johnson (CIK 0000200406)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000200406",
+            "value": null,
+            "detail": "cik resolves to Johnson & Johnson (CIK 0000200406)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "022c199ec282d25b5550c810",
+            "value": 15119000000.0,
+            "detail": "SEC 10-K 0000200406-22-000022 filed 2022-02-17"
+          }
+        ],
+        "explanation": "After unit normalization the value equals the SEC-reported net_income for the period within 0.5%.",
+        "detected_issue_types": [],
+        "recommended_action": "No action required."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": true,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": false,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 4
+    },
+    {
+      "case_id": "case-2772916ca0db",
+      "category": "ID_MISMAP",
+      "subtype": "cik_swap",
+      "severity": "critical",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "identifier_collision"
+        ],
+        "should_abstain": false,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0000797468"
+      },
+      "response": {
+        "case_id": "case-2772916ca0db",
+        "status": "flagged",
+        "answer": "Identifier inconsistency detected.",
+        "normalized_value": null,
+        "unit": null,
+        "company_identifier": "0000797468",
+        "fiscal_period": "2024-12-31",
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-63d63cad4d",
+            "value": 85445000000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000797468",
+            "value": null,
+            "detail": "ticker/name resolves to Occidental Petroleum Corporation (CIK 0000797468)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000731766",
+            "value": null,
+            "detail": "cik resolves to UnitedHealth Group Incorporated (CIK 0000731766)"
+          }
+        ],
+        "explanation": "ticker OXY resolves to CIK 0000797468 but the record carries CIK 0000731766.",
+        "detected_issue_types": [
+          "identifier_collision"
+        ],
+        "recommended_action": "Hold the record; correct the identifier mapping and re-verify."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 2
+    },
+    {
+      "case_id": "case-28a327f09532",
+      "category": "CLEAN_CONTROL",
+      "subtype": "optional_field_missing",
+      "severity": "low",
+      "smoke": true,
+      "expected": {
+        "is_error": false,
+        "expected_statuses": [
+          "verified"
+        ],
+        "expected_issue_types": [],
+        "should_abstain": false,
+        "expected_value": 319616000000.0,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0001652044"
+      },
+      "response": {
+        "case_id": "case-28a327f09532",
+        "status": "verified",
+        "answer": "Value matches the reference observation.",
+        "normalized_value": 319616000000.0,
+        "unit": "USD",
+        "company_identifier": "0001652044",
+        "fiscal_period": "2020-12-31",
+        "confidence": 0.97,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-63fd99fcda",
+            "value": 319616000000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0001652044",
+            "value": null,
+            "detail": "ticker/name resolves to Alphabet Inc. (CIK 0001652044)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0001652044",
+            "value": null,
+            "detail": "cik resolves to Alphabet Inc. (CIK 0001652044)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "90ad9d6e6e862fc3fdd83221",
+            "value": 319616000000.0,
+            "detail": "SEC 10-K 0001652044-22-000019 filed 2022-02-02"
+          }
+        ],
+        "explanation": "After unit normalization the value equals the SEC-reported total_assets for the period within 0.5%.",
+        "detected_issue_types": [],
+        "recommended_action": "No action required."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": true,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": false,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 4
+    },
+    {
+      "case_id": "case-3a0450f2a0ae",
+      "category": "CONTRADICTION",
+      "subtype": "unit_inconsistency",
+      "severity": "medium",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "unit_inconsistency"
+        ],
+        "should_abstain": false,
+        "expected_value": 7545200000.0,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": null
+      },
+      "response": {
+        "case_id": "case-3a0450f2a0ae",
+        "status": "flagged",
+        "answer": "Feeds use inconsistent unit labels.",
+        "normalized_value": 7545200000.0,
+        "unit": "USD",
+        "company_identifier": "0000063908",
+        "fiscal_period": "2021-12-31",
+        "confidence": 0.88,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-91363ac4a1",
+            "value": 7545200000.0,
+            "detail": "feed_A says 7545200000.0 USD"
+          },
+          {
+            "source": "input_record",
+            "ref": "rec-c7a218de09",
+            "value": 7545200.0,
+            "detail": "feed_B says 7545200.0 USDthousands"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000063908",
+            "value": null,
+            "detail": "ticker/name resolves to McDonald's Corporation (CIK 0000063908)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000063908",
+            "value": null,
+            "detail": "cik resolves to McDonald's Corporation (CIK 0000063908)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "396abc4fdc492d6988116d20",
+            "value": 7545200000.0,
+            "detail": "SEC 10-K 0000063908-24-000072"
+          }
+        ],
+        "explanation": "The feeds agree after unit normalization but label the same value with different units.",
+        "detected_issue_types": [
+          "unit_inconsistency"
+        ],
+        "recommended_action": "Standardize unit labels at the source."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": true,
+        "identity_ok": null,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 5
+    },
+    {
+      "case_id": "case-3d1b5d274943",
+      "category": "ID_MISMAP",
+      "subtype": "figi_swap",
+      "severity": "critical",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "identifier_collision"
+        ],
+        "should_abstain": false,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0000789019"
+      },
+      "response": {
+        "case_id": "case-3d1b5d274943",
+        "status": "flagged",
+        "answer": "Identifier inconsistency detected.",
+        "normalized_value": null,
+        "unit": null,
+        "company_identifier": "0000789019",
+        "fiscal_period": "2025-06-30",
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-a3bd162de3",
+            "value": 281724000000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000789019",
+            "value": null,
+            "detail": "ticker/name resolves to Microsoft Corporation (CIK 0000789019)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000789019",
+            "value": null,
+            "detail": "cik resolves to Microsoft Corporation (CIK 0000789019)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "BBG009S39JX6",
+            "value": null,
+            "detail": "FIGI maps to a different company"
+          }
+        ],
+        "explanation": "FIGI BBG009S39JX6 belongs to CIK 0001652044, not 0000789019.",
+        "detected_issue_types": [
+          "identifier_collision"
+        ],
+        "recommended_action": "Hold the record; correct the identifier mapping and re-verify."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 3
+    },
+    {
+      "case_id": "case-430a971eeb1a",
+      "category": "CONTRADICTION",
+      "subtype": "conflicting_values",
+      "severity": "high",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "ambiguous",
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "conflicting_sources"
+        ],
+        "should_abstain": true,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": null
+      },
+      "response": {
+        "case_id": "case-430a971eeb1a",
+        "status": "ambiguous",
+        "answer": "Irreconcilable conflict between sources.",
+        "normalized_value": null,
+        "unit": null,
+        "company_identifier": "0001341439",
+        "fiscal_period": "2022-05-31",
+        "confidence": 0.6,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-976b0b4962",
+            "value": 6717000000.0,
+            "detail": "feed_A says 6717000000.0 USD"
+          },
+          {
+            "source": "input_record",
+            "ref": "rec-428d82064e",
+            "value": 7254360000.000001,
+            "detail": "feed_B says 7254360000.000001 USD"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0001341439",
+            "value": null,
+            "detail": "ticker/name resolves to Oracle Corporation (CIK 0001341439)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0001341439",
+            "value": null,
+            "detail": "cik resolves to Oracle Corporation (CIK 0001341439)"
+          }
+        ],
+        "explanation": "Two sources report different values for the same company, concept and period, and the reference store cannot adjudicate.",
+        "detected_issue_types": [
+          "conflicting_sources"
+        ],
+        "recommended_action": "Escalate to a data steward; do not publish either value."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": null,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": true,
+        "abstain_expected": true,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 5
+    },
+    {
+      "case_id": "case-46bce76fde26",
+      "category": "SCALE_ERROR",
+      "subtype": "mul_value",
+      "severity": "high",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "scale_mismatch"
+        ],
+        "should_abstain": false,
+        "expected_value": 85063000000.0,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0000072971"
+      },
+      "response": {
+        "case_id": "case-46bce76fde26",
+        "status": "flagged",
+        "answer": "Scale error detected.",
+        "normalized_value": 85063000000.0,
+        "unit": "USD",
+        "company_identifier": "0000072971",
+        "fiscal_period": "2019-12-31",
+        "confidence": 0.93,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-d103a85462",
+            "value": 85063000000000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000072971",
+            "value": null,
+            "detail": "ticker/name resolves to Wells Fargo & Company (CIK 0000072971)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000072971",
+            "value": null,
+            "detail": "cik resolves to Wells Fargo & Company (CIK 0000072971)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "f5399da2a536d40d187ae69b",
+            "value": 85063000000.0,
+            "detail": "SEC 10-K 0000072971-20-000217 filed 2020-02-27"
+          }
+        ],
+        "explanation": "The record differs from the reference by a factor of 10^3; likely a thousands/millions confusion.",
+        "detected_issue_types": [
+          "scale_mismatch"
+        ],
+        "recommended_action": "Correct the scale or unit label and use the reference value."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": true,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 4
+    },
+    {
+      "case_id": "case-4e58c8a6f131",
+      "category": "MISSING_DATA",
+      "subtype": "missing_value",
+      "severity": "medium",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "insufficient_evidence"
+        ],
+        "expected_issue_types": [
+          "missing_input"
+        ],
+        "should_abstain": true,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": null
+      },
+      "response": {
+        "case_id": "case-4e58c8a6f131",
+        "status": "insufficient_evidence",
+        "answer": "No reference observation available for this period.",
+        "normalized_value": null,
+        "unit": null,
+        "company_identifier": "0000104169",
+        "fiscal_period": "2024-01-31",
+        "confidence": 0.85,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-7e8adb1091",
+            "value": null,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000104169",
+            "value": null,
+            "detail": "ticker/name resolves to Walmart Inc. (CIK 0000104169)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000104169",
+            "value": null,
+            "detail": "cik resolves to Walmart Inc. (CIK 0000104169)"
+          }
+        ],
+        "explanation": "The reference store has no net_income observation for WMT period ending 2024-01-31; the record cannot be verified.",
+        "detected_issue_types": [
+          "missing_input"
+        ],
+        "recommended_action": "Request the source filing or abstain from using this value."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": null,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": true,
+        "abstain_expected": true,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 3
+    },
+    {
+      "case_id": "case-4ecbf03b2732",
+      "category": "MISSING_DATA",
+      "subtype": "unverifiable_period",
+      "severity": "medium",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "insufficient_evidence"
+        ],
+        "expected_issue_types": [
+          "missing_input"
+        ],
+        "should_abstain": true,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": null
+      },
+      "response": {
+        "case_id": "case-4ecbf03b2732",
+        "status": "insufficient_evidence",
+        "answer": "No reference observation available for this period.",
+        "normalized_value": null,
+        "unit": null,
+        "company_identifier": "0000059478",
+        "fiscal_period": "2021-12-31",
+        "confidence": 0.85,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-aa722d312b",
+            "value": 28318400000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000059478",
+            "value": null,
+            "detail": "ticker/name resolves to Eli Lilly and Company (CIK 0000059478)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000059478",
+            "value": null,
+            "detail": "cik resolves to Eli Lilly and Company (CIK 0000059478)"
+          }
+        ],
+        "explanation": "The reference store has no revenue observation for LLY period ending 2021-12-31; the record cannot be verified.",
+        "detected_issue_types": [
+          "missing_input"
+        ],
+        "recommended_action": "Request the source filing or abstain from using this value."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": null,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": true,
+        "abstain_expected": true,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 3
+    },
+    {
+      "case_id": "case-5869e8b6d603",
+      "category": "SCALE_ERROR",
+      "subtype": "mul_value",
+      "severity": "high",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "scale_mismatch"
+        ],
+        "should_abstain": false,
+        "expected_value": 52626800000.0,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0000063908"
+      },
+      "response": {
+        "case_id": "case-5869e8b6d603",
+        "status": "flagged",
+        "answer": "Scale error detected.",
+        "normalized_value": 52626800000.0,
+        "unit": "USD",
+        "company_identifier": "0000063908",
+        "fiscal_period": "2020-12-31",
+        "confidence": 0.93,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-95ddab4ed1",
+            "value": 5.26268e+16,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000063908",
+            "value": null,
+            "detail": "ticker/name resolves to McDonald's Corporation (CIK 0000063908)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000063908",
+            "value": null,
+            "detail": "cik resolves to McDonald's Corporation (CIK 0000063908)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "363ec6e8e4253d6b49f3dd9d",
+            "value": 52626800000.0,
+            "detail": "SEC 10-K 0000063908-23-000012 filed 2023-02-24"
+          }
+        ],
+        "explanation": "The record differs from the reference by a factor of 10^6; likely a thousands/millions confusion.",
+        "detected_issue_types": [
+          "scale_mismatch"
+        ],
+        "recommended_action": "Correct the scale or unit label and use the reference value."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": true,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 4
+    },
+    {
+      "case_id": "case-6421b30a92e2",
+      "category": "SCALE_ERROR",
+      "subtype": "div_value",
+      "severity": "high",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "scale_mismatch"
+        ],
+        "should_abstain": false,
+        "expected_value": 4002814000000.0,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0000019617"
+      },
+      "response": {
+        "case_id": "case-6421b30a92e2",
+        "status": "flagged",
+        "answer": "Scale error detected.",
+        "normalized_value": 4002814000000.0,
+        "unit": "USD",
+        "company_identifier": "0000019617",
+        "fiscal_period": "2024-12-31",
+        "confidence": 0.93,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-11555b5710",
+            "value": 4002814000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000019617",
+            "value": null,
+            "detail": "ticker/name resolves to JPMorgan Chase & Co. (CIK 0000019617)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000019617",
+            "value": null,
+            "detail": "cik resolves to JPMorgan Chase & Co. (CIK 0000019617)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "0f56d5f584c13af7219659f7",
+            "value": 4002814000000.0,
+            "detail": "SEC 10-K 0001628280-26-008131 filed 2026-02-13"
+          }
+        ],
+        "explanation": "The record differs from the reference by a factor of 10^-3; likely a thousands/millions confusion.",
+        "detected_issue_types": [
+          "scale_mismatch"
+        ],
+        "recommended_action": "Correct the scale or unit label and use the reference value."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": true,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 4
+    },
+    {
+      "case_id": "case-6a4bc8eafc96",
+      "category": "ID_MISMAP",
+      "subtype": "cik_swap",
+      "severity": "critical",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "identifier_collision"
+        ],
+        "should_abstain": false,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0000320193"
+      },
+      "response": {
+        "case_id": "case-6a4bc8eafc96",
+        "status": "flagged",
+        "answer": "Identifier inconsistency detected.",
+        "normalized_value": null,
+        "unit": null,
+        "company_identifier": "0000320193",
+        "fiscal_period": "2021-09-25",
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-9b827b20f3",
+            "value": 94680000000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000320193",
+            "value": null,
+            "detail": "ticker/name resolves to Apple Inc. (CIK 0000320193)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000104169",
+            "value": null,
+            "detail": "cik resolves to Walmart Inc. (CIK 0000104169)"
+          }
+        ],
+        "explanation": "ticker AAPL resolves to CIK 0000320193 but the record carries CIK 0000104169.",
+        "detected_issue_types": [
+          "identifier_collision"
+        ],
+        "recommended_action": "Hold the record; correct the identifier mapping and re-verify."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 2
+    },
+    {
+      "case_id": "case-8dc7700718d6",
+      "category": "CONTRADICTION",
+      "subtype": "unit_inconsistency",
+      "severity": "medium",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "unit_inconsistency"
+        ],
+        "should_abstain": false,
+        "expected_value": 137012000000.0,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": null
+      },
+      "response": {
+        "case_id": "case-8dc7700718d6",
+        "status": "flagged",
+        "answer": "Feeds use inconsistent unit labels.",
+        "normalized_value": 137012000000.0,
+        "unit": "USD",
+        "company_identifier": "0000012927",
+        "fiscal_period": "2023-12-31",
+        "confidence": 0.88,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-37ffbdf926",
+            "value": 137012000000.0,
+            "detail": "feed_A says 137012000000.0 USD"
+          },
+          {
+            "source": "input_record",
+            "ref": "rec-f0cde0b62b",
+            "value": 137012000.0,
+            "detail": "feed_B says 137012000.0 USDthousands"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000012927",
+            "value": null,
+            "detail": "ticker/name resolves to The Boeing Company (CIK 0000012927)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000012927",
+            "value": null,
+            "detail": "cik resolves to The Boeing Company (CIK 0000012927)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "18363fddda6b45a5cc5757bf",
+            "value": 137012000000.0,
+            "detail": "SEC 10-K 0000012927-25-000015"
+          }
+        ],
+        "explanation": "The feeds agree after unit normalization but label the same value with different units.",
+        "detected_issue_types": [
+          "unit_inconsistency"
+        ],
+        "recommended_action": "Standardize unit labels at the source."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": true,
+        "identity_ok": null,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 5
+    },
+    {
+      "case_id": "case-9ca5f0b2e092",
+      "category": "PERIOD_SHIFT",
+      "subtype": "label_prior_year",
+      "severity": "critical",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "period_mismatch"
+        ],
+        "should_abstain": false,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0000909832"
+      },
+      "response": {
+        "case_id": "case-9ca5f0b2e092",
+        "status": "flagged",
+        "answer": "Reporting-period mismatch detected.",
+        "normalized_value": 5844000000.0,
+        "unit": "USD",
+        "company_identifier": "0000909832",
+        "fiscal_period": "2022-08-28",
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-e3e0b2da2c",
+            "value": 6292000000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000909832",
+            "value": null,
+            "detail": "ticker/name resolves to Costco Wholesale Corporation (CIK 0000909832)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000909832",
+            "value": null,
+            "detail": "cik resolves to Costco Wholesale Corporation (CIK 0000909832)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "138fd2fcd63076585abf07bc",
+            "value": 5844000000.0,
+            "detail": "SEC 10-K 0000909832-24-000049 filed 2024-10-09"
+          },
+          {
+            "source": "reference_store",
+            "ref": "af25895cb9330e887d66a6e0",
+            "value": 6292000000.0,
+            "detail": "same value is reported for period ending 2023-09-03"
+          }
+        ],
+        "explanation": "The stated value equals the net_income for the period ending 2023-09-03, not 2022-08-28.",
+        "detected_issue_types": [
+          "period_mismatch"
+        ],
+        "recommended_action": "Correct the fiscal period before use."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 5
+    },
+    {
+      "case_id": "case-9d12853b57a7",
+      "category": "CLEAN_CONTROL",
+      "subtype": "valid_record",
+      "severity": "low",
+      "smoke": true,
+      "expected": {
+        "is_error": false,
+        "expected_statuses": [
+          "verified"
+        ],
+        "expected_issue_types": [],
+        "should_abstain": false,
+        "expected_value": 92187000000.0,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0000077476"
+      },
+      "response": {
+        "case_id": "case-9d12853b57a7",
+        "status": "verified",
+        "answer": "Value matches the reference observation.",
+        "normalized_value": 92187000000.0,
+        "unit": "USD",
+        "company_identifier": "0000077476",
+        "fiscal_period": "2022-12-31",
+        "confidence": 0.97,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-b311eec5a0",
+            "value": 92187000000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000077476",
+            "value": null,
+            "detail": "ticker/name resolves to PepsiCo, Inc. (CIK 0000077476)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000077476",
+            "value": null,
+            "detail": "cik resolves to PepsiCo, Inc. (CIK 0000077476)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "7a4a1c00b40dced698e4b66b",
+            "value": 92187000000.0,
+            "detail": "SEC 10-K 0000077476-24-000008 filed 2024-02-09"
+          }
+        ],
+        "explanation": "After unit normalization the value equals the SEC-reported total_assets for the period within 0.5%.",
+        "detected_issue_types": [],
+        "recommended_action": "No action required."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": true,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": false,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 5
+    },
+    {
+      "case_id": "case-b4d70286c53a",
+      "category": "CONTRADICTION",
+      "subtype": "conflicting_values",
+      "severity": "high",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "ambiguous",
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "conflicting_sources"
+        ],
+        "should_abstain": true,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": null
+      },
+      "response": {
+        "case_id": "case-b4d70286c53a",
+        "status": "ambiguous",
+        "answer": "Irreconcilable conflict between sources.",
+        "normalized_value": null,
+        "unit": null,
+        "company_identifier": "0000080424",
+        "fiscal_period": "2024-06-30",
+        "confidence": 0.6,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-6007065263",
+            "value": 84039000000.0,
+            "detail": "feed_A says 84039000000.0 USD"
+          },
+          {
+            "source": "input_record",
+            "ref": "rec-b27e716a57",
+            "value": 73954320000.0,
+            "detail": "feed_B says 73954320000.0 USD"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000080424",
+            "value": null,
+            "detail": "ticker/name resolves to The Procter & Gamble Company (CIK 0000080424)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000080424",
+            "value": null,
+            "detail": "cik resolves to The Procter & Gamble Company (CIK 0000080424)"
+          }
+        ],
+        "explanation": "Two sources report different values for the same company, concept and period, and the reference store cannot adjudicate.",
+        "detected_issue_types": [
+          "conflicting_sources"
+        ],
+        "recommended_action": "Escalate to a data steward; do not publish either value."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": null,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": true,
+        "abstain_expected": true,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 5
+    },
+    {
+      "case_id": "case-c74f10bdeef9",
+      "category": "PERIOD_SHIFT",
+      "subtype": "label_prior_year",
+      "severity": "critical",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "period_mismatch"
+        ],
+        "should_abstain": false,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0000077476"
+      },
+      "response": {
+        "case_id": "case-c74f10bdeef9",
+        "status": "flagged",
+        "answer": "Reporting-period mismatch detected.",
+        "normalized_value": 79474000000.0,
+        "unit": "USD",
+        "company_identifier": "0000077476",
+        "fiscal_period": "2021-12-25",
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-0b3d721be0",
+            "value": 86392000000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000077476",
+            "value": null,
+            "detail": "ticker/name resolves to PepsiCo, Inc. (CIK 0000077476)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000077476",
+            "value": null,
+            "detail": "cik resolves to PepsiCo, Inc. (CIK 0000077476)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "b46d60c25128a1d56cdde8c6",
+            "value": 79474000000.0,
+            "detail": "SEC 10-K 0000077476-24-000008 filed 2024-02-09"
+          },
+          {
+            "source": "reference_store",
+            "ref": "85f9d527058c42b3aa695325",
+            "value": 86392000000.0,
+            "detail": "same value is reported for period ending 2022-12-31"
+          }
+        ],
+        "explanation": "The stated value equals the revenue for the period ending 2022-12-31, not 2021-12-25.",
+        "detected_issue_types": [
+          "period_mismatch"
+        ],
+        "recommended_action": "Correct the fiscal period before use."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 5
+    },
+    {
+      "case_id": "case-c9fb2f83e690",
+      "category": "PERIOD_SHIFT",
+      "subtype": "label_prior_year",
+      "severity": "critical",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "period_mismatch"
+        ],
+        "should_abstain": false,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0000200406"
+      },
+      "response": {
+        "case_id": "case-c9fb2f83e690",
+        "status": "flagged",
+        "answer": "Reporting-period mismatch detected.",
+        "normalized_value": 85159000000.0,
+        "unit": "USD",
+        "company_identifier": "0000200406",
+        "fiscal_period": "2023-12-31",
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-b1e8c2d0a6",
+            "value": 88821000000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000200406",
+            "value": null,
+            "detail": "ticker/name resolves to Johnson & Johnson (CIK 0000200406)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000200406",
+            "value": null,
+            "detail": "cik resolves to Johnson & Johnson (CIK 0000200406)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "391a2b85ad183d4e37f8705a",
+            "value": 85159000000.0,
+            "detail": "SEC 10-K 0000200406-26-000016 filed 2026-02-11"
+          },
+          {
+            "source": "reference_store",
+            "ref": "c509f04d2e031c05a9a5c9e6",
+            "value": 88821000000.0,
+            "detail": "same value is reported for period ending 2024-12-29"
+          }
+        ],
+        "explanation": "The stated value equals the revenue for the period ending 2024-12-29, not 2023-12-31.",
+        "detected_issue_types": [
+          "period_mismatch"
+        ],
+        "recommended_action": "Correct the fiscal period before use."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 5
+    },
+    {
+      "case_id": "case-d719739c738c",
+      "category": "SCALE_ERROR",
+      "subtype": "mislabel_unit",
+      "severity": "high",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "scale_mismatch"
+        ],
+        "should_abstain": false,
+        "expected_value": 67887000000.0,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0000001800"
+      },
+      "response": {
+        "case_id": "case-d719739c738c",
+        "status": "flagged",
+        "answer": "Scale error detected.",
+        "normalized_value": 67887000000.0,
+        "unit": "USD",
+        "company_identifier": "0000001800",
+        "fiscal_period": "2019-12-31",
+        "confidence": 0.93,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-3f7245a129",
+            "value": 67887000000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000001800",
+            "value": null,
+            "detail": "ticker/name resolves to Abbott Laboratories (CIK 0000001800)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000001800",
+            "value": null,
+            "detail": "cik resolves to Abbott Laboratories (CIK 0000001800)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "7d9682610f468f7a73b1d52d",
+            "value": 67887000000.0,
+            "detail": "SEC 10-K 0001104659-21-025751 filed 2021-02-19"
+          }
+        ],
+        "explanation": "The record differs from the reference by a factor of 10^6; likely a thousands/millions confusion.",
+        "detected_issue_types": [
+          "scale_mismatch"
+        ],
+        "recommended_action": "Correct the scale or unit label and use the reference value."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": true,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 4
+    },
+    {
+      "case_id": "case-d8e59bc9320d",
+      "category": "PERIOD_SHIFT",
+      "subtype": "label_prior_year",
+      "severity": "critical",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "period_mismatch"
+        ],
+        "should_abstain": false,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0001090727"
+      },
+      "response": {
+        "case_id": "case-d8e59bc9320d",
+        "status": "flagged",
+        "answer": "Reporting-period mismatch detected.",
+        "normalized_value": 6708000000.0,
+        "unit": "USD",
+        "company_identifier": "0001090727",
+        "fiscal_period": "2023-12-31",
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-713018c669",
+            "value": 5782000000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0001090727",
+            "value": null,
+            "detail": "ticker/name resolves to United Parcel Service, Inc. (CIK 0001090727)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0001090727",
+            "value": null,
+            "detail": "cik resolves to United Parcel Service, Inc. (CIK 0001090727)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "c04d1f59d9fd440ca72563c2",
+            "value": 6708000000.0,
+            "detail": "SEC 10-K 0001628280-26-008432 filed 2026-02-17"
+          },
+          {
+            "source": "reference_store",
+            "ref": "6e77f9e3acc9e5c3723948cf",
+            "value": 5782000000.0,
+            "detail": "same value is reported for period ending 2024-12-31"
+          }
+        ],
+        "explanation": "The stated value equals the net_income for the period ending 2024-12-31, not 2023-12-31.",
+        "detected_issue_types": [
+          "period_mismatch"
+        ],
+        "recommended_action": "Correct the fiscal period before use."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 5
+    },
+    {
+      "case_id": "case-edccefb016c4",
+      "category": "ID_MISMAP",
+      "subtype": "figi_swap",
+      "severity": "critical",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "identifier_collision"
+        ],
+        "should_abstain": false,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0000012927"
+      },
+      "response": {
+        "case_id": "case-edccefb016c4",
+        "status": "flagged",
+        "answer": "Identifier inconsistency detected.",
+        "normalized_value": null,
+        "unit": null,
+        "company_identifier": "0000012927",
+        "fiscal_period": "2019-12-31",
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-00eeeac7e8",
+            "value": 76559000000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000012927",
+            "value": null,
+            "detail": "ticker/name resolves to The Boeing Company (CIK 0000012927)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0000012927",
+            "value": null,
+            "detail": "cik resolves to The Boeing Company (CIK 0000012927)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "BBG000BBJQV0",
+            "value": null,
+            "detail": "FIGI maps to a different company"
+          }
+        ],
+        "explanation": "FIGI BBG000BBJQV0 belongs to CIK 0001045810, not 0000012927.",
+        "detected_issue_types": [
+          "identifier_collision"
+        ],
+        "recommended_action": "Hold the record; correct the identifier mapping and re-verify."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 3
+    }
+  ]
+}

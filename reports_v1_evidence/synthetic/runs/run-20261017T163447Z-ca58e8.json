@@ -1,0 +1,2149 @@
+{
+  "run": {
+    "run_id": "run-20261017T163447Z-ca58e8",
+    "run_timestamp": "2026-10-17T16:34:47",
+    "git_commit": null,
+    "dataset_snapshot": "915f290b61c33ccd",
+    "model_id": "mock-reference",
+    "agent_profile": "mock",
+    "prompt_version": "mock-v1",
+    "evaluation_config": "{\"calibration_bins\":10,\"high_confidence_threshold\":0.8,\"relative_tolerance\":0.005}",
+    "test_suite_version": "v1-s42-n20-b369d47d",
+    "mode": "smoke",
+    "n_cases": 24,
+    "status": "completed",
+    "execution_json": "{\"duration_seconds\": 0.297, \"agent_errors\": 0, \"provider_unavailable\": 0, \"token_usage\": null, \"estimated_cost_usd\": null}",
+    "validation_run_id": "val-20261017T163423Z-dc753a"
+  },
+  "execution": {
+    "duration_seconds": 0.297,
+    "agent_errors": 0,
+    "provider_unavailable": 0,
+    "token_usage": null,
+    "estimated_cost_usd": null
+  },
+  "metrics": {
+    "total": 24,
+    "passed": 24,
+    "accuracy": 1.0,
+    "by_category": {
+      "CLEAN_CONTROL": {
+        "n": 4,
+        "passed": 4,
+        "accuracy": 1.0,
+        "detection_precision": null,
+        "detection_recall": null,
+        "detection_f1": null
+      },
+      "CONTRADICTION": {
+        "n": 4,
+        "passed": 4,
+        "accuracy": 1.0,
+        "detection_precision": 1.0,
+        "detection_recall": 1.0,
+        "detection_f1": 1.0
+      },
+      "ID_MISMAP": {
+        "n": 4,
+        "passed": 4,
+        "accuracy": 1.0,
+        "detection_precision": 1.0,
+        "detection_recall": 1.0,
+        "detection_f1": 1.0
+      },
+      "MISSING_DATA": {
+        "n": 4,
+        "passed": 4,
+        "accuracy": 1.0,
+        "detection_precision": 1.0,
+        "detection_recall": 1.0,
+        "detection_f1": 1.0
+      },
+      "PERIOD_SHIFT": {
+        "n": 4,
+        "passed": 4,
+        "accuracy": 1.0,
+        "detection_precision": 1.0,
+        "detection_recall": 1.0,
+        "detection_f1": 1.0
+      },
+      "SCALE_ERROR": {
+        "n": 4,
+        "passed": 4,
+        "accuracy": 1.0,
+        "detection_precision": 1.0,
+        "detection_recall": 1.0,
+        "detection_f1": 1.0
+      }
+    },
+    "detection": {
+      "tp": 20,
+      "fp": 0,
+      "fn": 0,
+      "tn": 4,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "false_positive_rate": 0.0,
+    "abstention": {
+      "cases_requiring_abstention": 6,
+      "abstention_recall": 1.0,
+      "abstention_precision": 1.0,
+      "answered_correctly_when_evidence_adequate": 1.0,
+      "incorrect_abstention_rate": 0.0,
+      "invented_values_when_abstention_required": 0
+    },
+    "calibration": {
+      "n": 24,
+      "bins": [
+        {
+          "lo": 0.0,
+          "hi": 0.1,
+          "n": 0,
+          "mean_confidence": null,
+          "accuracy": null
+        },
+        {
+          "lo": 0.1,
+          "hi": 0.2,
+          "n": 0,
+          "mean_confidence": null,
+          "accuracy": null
+        },
+        {
+          "lo": 0.2,
+          "hi": 0.3,
+          "n": 0,
+          "mean_confidence": null,
+          "accuracy": null
+        },
+        {
+          "lo": 0.3,
+          "hi": 0.4,
+          "n": 0,
+          "mean_confidence": null,
+          "accuracy": null
+        },
+        {
+          "lo": 0.4,
+          "hi": 0.5,
+          "n": 0,
+          "mean_confidence": null,
+          "accuracy": null
+        },
+        {
+          "lo": 0.5,
+          "hi": 0.6,
+          "n": 0,
+          "mean_confidence": null,
+          "accuracy": null
+        },
+        {
+          "lo": 0.6,
+          "hi": 0.7,
+          "n": 2,
+          "mean_confidence": 0.6,
+          "accuracy": 1.0
+        },
+        {
+          "lo": 0.7,
+          "hi": 0.8,
+          "n": 0,
+          "mean_confidence": null,
+          "accuracy": null
+        },
+        {
+          "lo": 0.8,
+          "hi": 0.9,
+          "n": 6,
+          "mean_confidence": 0.86,
+          "accuracy": 1.0
+        },
+        {
+          "lo": 0.9,
+          "hi": 1.0,
+          "n": 16,
+          "mean_confidence": 0.9250000000000002,
+          "accuracy": 1.0
+        }
+      ],
+      "brier": 0.022583333333333334,
+      "ece": 0.11833333333333322,
+      "note": "Agent confidence is self-reported and NOT a statistically validated probability."
+    },
+    "high_confidence_wrong": {
+      "threshold": 0.8,
+      "count": 0,
+      "cases": []
+    },
+    "rubric": {
+      "evidence_relevance": 1.0,
+      "factual_consistency": 1.0,
+      "reasoning_completeness": 1.0
+    },
+    "evidence_completeness": 1.0,
+    "root_causes": [],
+    "severity": {
+      "failures_by_severity": {},
+      "weighted_failure_score": 0
+    },
+    "ranked_failures": []
+  },
+  "results": [
+    {
+      "case_id": "case-00d5a85bfbc8",
+      "category": "CLEAN_CONTROL",
+      "subtype": "valid_record",
+      "severity": "low",
+      "smoke": true,
+      "expected": {
+        "is_error": false,
+        "expected_statuses": [
+          "verified"
+        ],
+        "expected_issue_types": [],
+        "should_abstain": false,
+        "expected_value": 5000000000.0,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0009000001"
+      },
+      "response": {
+        "case_id": "case-00d5a85bfbc8",
+        "status": "verified",
+        "answer": "Value matches the reference observation.",
+        "normalized_value": 5000000000.0,
+        "unit": "USD",
+        "company_identifier": "0009000001",
+        "fiscal_period": "2019-12-31",
+        "confidence": 0.97,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-0be51197b5",
+            "value": 5000000000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000001",
+            "value": null,
+            "detail": "ticker/name resolves to Alpha Test Corp (CIK 0009000001)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000001",
+            "value": null,
+            "detail": "cik resolves to Alpha Test Corp (CIK 0009000001)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "4d7b86a56c0db3db7f44893d",
+            "value": 5000000000.0,
+            "detail": "SEC 10-K 0009000001-21-000001 filed 2021-02-15"
+          }
+        ],
+        "explanation": "After unit normalization the value equals the SEC-reported total_assets for the period within 0.5%.",
+        "detected_issue_types": [],
+        "recommended_action": "No action required."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": true,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": false,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 5
+    },
+    {
+      "case_id": "case-18aac73de79c",
+      "category": "SCALE_ERROR",
+      "subtype": "div_value",
+      "severity": "high",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "scale_mismatch"
+        ],
+        "should_abstain": false,
+        "expected_value": 9419200000.0,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0009000007"
+      },
+      "response": {
+        "case_id": "case-18aac73de79c",
+        "status": "flagged",
+        "answer": "Scale error detected.",
+        "normalized_value": 9419200000.0,
+        "unit": "USD",
+        "company_identifier": "0009000007",
+        "fiscal_period": "2021-12-31",
+        "confidence": 0.93,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-fec108930d",
+            "value": 9419200.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000007",
+            "value": null,
+            "detail": "ticker/name resolves to Golf Test Corp (CIK 0009000007)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000007",
+            "value": null,
+            "detail": "cik resolves to Golf Test Corp (CIK 0009000007)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "0168e846f08b661ca38f50b1",
+            "value": 9419200000.0,
+            "detail": "SEC 10-K 0009000007-23-000001 filed 2023-02-15"
+          }
+        ],
+        "explanation": "The record differs from the reference by a factor of 10^-3; likely a thousands/millions confusion.",
+        "detected_issue_types": [
+          "scale_mismatch"
+        ],
+        "recommended_action": "Correct the scale or unit label and use the reference value."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": true,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 4
+    },
+    {
+      "case_id": "case-28c7244102d6",
+      "category": "PERIOD_SHIFT",
+      "subtype": "label_prior_year",
+      "severity": "critical",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "period_mismatch"
+        ],
+        "should_abstain": false,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0009000001"
+      },
+      "response": {
+        "case_id": "case-28c7244102d6",
+        "status": "flagged",
+        "answer": "Reporting-period mismatch detected.",
+        "normalized_value": 1234200000.0,
+        "unit": "USD",
+        "company_identifier": "0009000001",
+        "fiscal_period": "2021-12-31",
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-12368f84c0",
+            "value": 1331000000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000001",
+            "value": null,
+            "detail": "ticker/name resolves to Alpha Test Corp (CIK 0009000001)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000001",
+            "value": null,
+            "detail": "cik resolves to Alpha Test Corp (CIK 0009000001)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "4d9fa2b1b0c57e048cbcefb1",
+            "value": 1234200000.0,
+            "detail": "SEC 10-K 0009000001-23-000001 filed 2023-02-15"
+          },
+          {
+            "source": "reference_store",
+            "ref": "3f5b7634897fc2ac1b0d5f21",
+            "value": 1331000000.0,
+            "detail": "same value is reported for period ending 2022-12-31"
+          }
+        ],
+        "explanation": "The stated value equals the revenue for the period ending 2022-12-31, not 2021-12-31.",
+        "detected_issue_types": [
+          "period_mismatch"
+        ],
+        "recommended_action": "Correct the fiscal period before use."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 5
+    },
+    {
+      "case_id": "case-3489359a0848",
+      "category": "CONTRADICTION",
+      "subtype": "unit_inconsistency",
+      "severity": "medium",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "unit_inconsistency"
+        ],
+        "should_abstain": false,
+        "expected_value": 21073920000.0,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": null
+      },
+      "response": {
+        "case_id": "case-3489359a0848",
+        "status": "flagged",
+        "answer": "Feeds use inconsistent unit labels.",
+        "normalized_value": 21073920000.0,
+        "unit": "USD",
+        "company_identifier": "0009000003",
+        "fiscal_period": "2022-12-31",
+        "confidence": 0.88,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-dd3c21f77b",
+            "value": 21073920000.0,
+            "detail": "feed_A says 21073920000.0 USD"
+          },
+          {
+            "source": "input_record",
+            "ref": "rec-de53436ee6",
+            "value": 21073920.0,
+            "detail": "feed_B says 21073920.0 USDthousands"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000003",
+            "value": null,
+            "detail": "ticker/name resolves to Charlie Test Corp (CIK 0009000003)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000003",
+            "value": null,
+            "detail": "cik resolves to Charlie Test Corp (CIK 0009000003)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "77150977f937703833905e0a",
+            "value": 21073920000.0,
+            "detail": "SEC 10-K 0009000003-24-000001"
+          }
+        ],
+        "explanation": "The feeds agree after unit normalization but label the same value with different units.",
+        "detected_issue_types": [
+          "unit_inconsistency"
+        ],
+        "recommended_action": "Standardize unit labels at the source."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": true,
+        "identity_ok": null,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 5
+    },
+    {
+      "case_id": "case-4cd559018a5a",
+      "category": "ID_MISMAP",
+      "subtype": "figi_swap",
+      "severity": "critical",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "identifier_collision"
+        ],
+        "should_abstain": false,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0009000006"
+      },
+      "response": {
+        "case_id": "case-4cd559018a5a",
+        "status": "flagged",
+        "answer": "Identifier inconsistency detected.",
+        "normalized_value": null,
+        "unit": null,
+        "company_identifier": "0009000006",
+        "fiscal_period": "2023-12-31",
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-7052635485",
+            "value": 1049403750.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000006",
+            "value": null,
+            "detail": "ticker/name resolves to Foxtrot Test Corp (CIK 0009000006)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000006",
+            "value": null,
+            "detail": "cik resolves to Foxtrot Test Corp (CIK 0009000006)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "BBGC00000007",
+            "value": null,
+            "detail": "FIGI maps to a different company"
+          }
+        ],
+        "explanation": "FIGI BBGC00000007 belongs to CIK 0009000008, not 0009000006.",
+        "detected_issue_types": [
+          "identifier_collision"
+        ],
+        "recommended_action": "Hold the record; correct the identifier mapping and re-verify."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 3
+    },
+    {
+      "case_id": "case-4d6294e861d0",
+      "category": "CONTRADICTION",
+      "subtype": "conflicting_values",
+      "severity": "high",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "ambiguous",
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "conflicting_sources"
+        ],
+        "should_abstain": true,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": null
+      },
+      "response": {
+        "case_id": "case-4d6294e861d0",
+        "status": "ambiguous",
+        "answer": "Irreconcilable conflict between sources.",
+        "normalized_value": null,
+        "unit": null,
+        "company_identifier": "0009000002",
+        "fiscal_period": "2019-12-31",
+        "confidence": 0.6,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-86e544eddd",
+            "value": 10000000000.0,
+            "detail": "feed_A says 10000000000.0 USD"
+          },
+          {
+            "source": "input_record",
+            "ref": "rec-54f7e21494",
+            "value": 10800000000.0,
+            "detail": "feed_B says 10800000000.0 USD"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000002",
+            "value": null,
+            "detail": "ticker/name resolves to Bravo Test Corp (CIK 0009000002)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000002",
+            "value": null,
+            "detail": "cik resolves to Bravo Test Corp (CIK 0009000002)"
+          }
+        ],
+        "explanation": "Two sources report different values for the same company, concept and period, and the reference store cannot adjudicate.",
+        "detected_issue_types": [
+          "conflicting_sources"
+        ],
+        "recommended_action": "Escalate to a data steward; do not publish either value."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": null,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": true,
+        "abstain_expected": true,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 5
+    },
+    {
+      "case_id": "case-5039361294a7",
+      "category": "MISSING_DATA",
+      "subtype": "unverifiable_period",
+      "severity": "medium",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "insufficient_evidence"
+        ],
+        "expected_issue_types": [
+          "missing_input"
+        ],
+        "should_abstain": true,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": null
+      },
+      "response": {
+        "case_id": "case-5039361294a7",
+        "status": "insufficient_evidence",
+        "answer": "No reference observation available for this period.",
+        "normalized_value": null,
+        "unit": null,
+        "company_identifier": "0009000003",
+        "fiscal_period": "2019-12-31",
+        "confidence": 0.85,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-5904043232",
+            "value": 15000000000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000003",
+            "value": null,
+            "detail": "ticker/name resolves to Charlie Test Corp (CIK 0009000003)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000003",
+            "value": null,
+            "detail": "cik resolves to Charlie Test Corp (CIK 0009000003)"
+          }
+        ],
+        "explanation": "The reference store has no total_assets observation for TSTC period ending 2019-12-31; the record cannot be verified.",
+        "detected_issue_types": [
+          "missing_input"
+        ],
+        "recommended_action": "Request the source filing or abstain from using this value."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": null,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": true,
+        "abstain_expected": true,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 3
+    },
+    {
+      "case_id": "case-55354b75b672",
+      "category": "ID_MISMAP",
+      "subtype": "figi_swap",
+      "severity": "critical",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "identifier_collision"
+        ],
+        "should_abstain": false,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0009000005"
+      },
+      "response": {
+        "case_id": "case-55354b75b672",
+        "status": "flagged",
+        "answer": "Identifier inconsistency detected.",
+        "normalized_value": null,
+        "unit": null,
+        "company_identifier": "0009000005",
+        "fiscal_period": "2019-12-31",
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-c935d49a32",
+            "value": 5000000000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000005",
+            "value": null,
+            "detail": "ticker/name resolves to Echo Test Corp (CIK 0009000005)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000005",
+            "value": null,
+            "detail": "cik resolves to Echo Test Corp (CIK 0009000005)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "BBGC00000005",
+            "value": null,
+            "detail": "FIGI maps to a different company"
+          }
+        ],
+        "explanation": "FIGI BBGC00000005 belongs to CIK 0009000006, not 0009000005.",
+        "detected_issue_types": [
+          "identifier_collision"
+        ],
+        "recommended_action": "Hold the record; correct the identifier mapping and re-verify."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 3
+    },
+    {
+      "case_id": "case-5565894fc5af",
+      "category": "MISSING_DATA",
+      "subtype": "missing_value",
+      "severity": "medium",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "insufficient_evidence"
+        ],
+        "expected_issue_types": [
+          "missing_input"
+        ],
+        "should_abstain": true,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": null
+      },
+      "response": {
+        "case_id": "case-5565894fc5af",
+        "status": "insufficient_evidence",
+        "answer": "No reference observation available for this period.",
+        "normalized_value": null,
+        "unit": null,
+        "company_identifier": "0009000005",
+        "fiscal_period": "2021-12-31",
+        "confidence": 0.85,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-0922ad2a25",
+            "value": null,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000005",
+            "value": null,
+            "detail": "ticker/name resolves to Echo Test Corp (CIK 0009000005)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000005",
+            "value": null,
+            "detail": "cik resolves to Echo Test Corp (CIK 0009000005)"
+          }
+        ],
+        "explanation": "The reference store has no total_assets observation for TSTE period ending 2021-12-31; the record cannot be verified.",
+        "detected_issue_types": [
+          "missing_input"
+        ],
+        "recommended_action": "Request the source filing or abstain from using this value."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": null,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": true,
+        "abstain_expected": true,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 3
+    },
+    {
+      "case_id": "case-5923a5b3a2aa",
+      "category": "SCALE_ERROR",
+      "subtype": "mul_value",
+      "severity": "high",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "scale_mismatch"
+        ],
+        "should_abstain": false,
+        "expected_value": 1000000000.0,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0009000001"
+      },
+      "response": {
+        "case_id": "case-5923a5b3a2aa",
+        "status": "flagged",
+        "answer": "Scale error detected.",
+        "normalized_value": 1000000000.0,
+        "unit": "USD",
+        "company_identifier": "0009000001",
+        "fiscal_period": "2019-12-31",
+        "confidence": 0.93,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-25b11c17a7",
+            "value": 1000000000000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000001",
+            "value": null,
+            "detail": "ticker/name resolves to Alpha Test Corp (CIK 0009000001)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000001",
+            "value": null,
+            "detail": "cik resolves to Alpha Test Corp (CIK 0009000001)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "bd75ef0fdfe67e7884b5397b",
+            "value": 1000000000.0,
+            "detail": "SEC 10-K 0009000001-21-000001 filed 2021-02-15"
+          }
+        ],
+        "explanation": "The record differs from the reference by a factor of 10^3; likely a thousands/millions confusion.",
+        "detected_issue_types": [
+          "scale_mismatch"
+        ],
+        "recommended_action": "Correct the scale or unit label and use the reference value."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": true,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 4
+    },
+    {
+      "case_id": "case-5deb59c2b40e",
+      "category": "CLEAN_CONTROL",
+      "subtype": "valid_record",
+      "severity": "low",
+      "smoke": true,
+      "expected": {
+        "is_error": false,
+        "expected_statuses": [
+          "verified"
+        ],
+        "expected_issue_types": [],
+        "should_abstain": false,
+        "expected_value": 273526200.0,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0009000002"
+      },
+      "response": {
+        "case_id": "case-5deb59c2b40e",
+        "status": "verified",
+        "answer": "Value matches the reference observation.",
+        "normalized_value": 273526200.0,
+        "unit": "USD",
+        "company_identifier": "0009000002",
+        "fiscal_period": "2022-12-31",
+        "confidence": 0.97,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-62eac7252b",
+            "value": 273526200.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000002",
+            "value": null,
+            "detail": "ticker/name resolves to Bravo Test Corp (CIK 0009000002)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000002",
+            "value": null,
+            "detail": "cik resolves to Bravo Test Corp (CIK 0009000002)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "9759abd4fcae47a60e7a499d",
+            "value": 273526200.0,
+            "detail": "SEC 10-K 0009000002-24-000001 filed 2024-02-15"
+          }
+        ],
+        "explanation": "After unit normalization the value equals the SEC-reported net_income for the period within 0.5%.",
+        "detected_issue_types": [],
+        "recommended_action": "No action required."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": true,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": false,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 5
+    },
+    {
+      "case_id": "case-6b25a9c5ddcb",
+      "category": "SCALE_ERROR",
+      "subtype": "mul_value",
+      "severity": "high",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "scale_mismatch"
+        ],
+        "should_abstain": false,
+        "expected_value": 1092627200.0,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0009000007"
+      },
+      "response": {
+        "case_id": "case-6b25a9c5ddcb",
+        "status": "flagged",
+        "answer": "Scale error detected.",
+        "normalized_value": 1092627200.0,
+        "unit": "USD",
+        "company_identifier": "0009000007",
+        "fiscal_period": "2022-12-31",
+        "confidence": 0.93,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-dd70c07b48",
+            "value": 1092627200000000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000007",
+            "value": null,
+            "detail": "ticker/name resolves to Golf Test Corp (CIK 0009000007)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000007",
+            "value": null,
+            "detail": "cik resolves to Golf Test Corp (CIK 0009000007)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "4d2b373d57586c265e4e75cc",
+            "value": 1092627200.0,
+            "detail": "SEC 10-K 0009000007-24-000001 filed 2024-02-15"
+          }
+        ],
+        "explanation": "The record differs from the reference by a factor of 10^6; likely a thousands/millions confusion.",
+        "detected_issue_types": [
+          "scale_mismatch"
+        ],
+        "recommended_action": "Correct the scale or unit label and use the reference value."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": true,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 4
+    },
+    {
+      "case_id": "case-88cb7b59a6dc",
+      "category": "SCALE_ERROR",
+      "subtype": "mislabel_unit",
+      "severity": "high",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "scale_mismatch"
+        ],
+        "should_abstain": false,
+        "expected_value": 25538000000.0,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0009000004"
+      },
+      "response": {
+        "case_id": "case-88cb7b59a6dc",
+        "status": "flagged",
+        "answer": "Scale error detected.",
+        "normalized_value": 25538000000.0,
+        "unit": "USD",
+        "company_identifier": "0009000004",
+        "fiscal_period": "2021-12-31",
+        "confidence": 0.93,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-da9108cc1c",
+            "value": 25538000000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000004",
+            "value": null,
+            "detail": "ticker/name resolves to Delta Test Corp (CIK 0009000004)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000004",
+            "value": null,
+            "detail": "cik resolves to Delta Test Corp (CIK 0009000004)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "9ca9d6b6e25186134447d774",
+            "value": 25538000000.0,
+            "detail": "SEC 10-K 0009000004-23-000001 filed 2023-02-15"
+          }
+        ],
+        "explanation": "The record differs from the reference by a factor of 10^6; likely a thousands/millions confusion.",
+        "detected_issue_types": [
+          "scale_mismatch"
+        ],
+        "recommended_action": "Correct the scale or unit label and use the reference value."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": true,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 4
+    },
+    {
+      "case_id": "case-89f695330553",
+      "category": "ID_MISMAP",
+      "subtype": "cik_swap",
+      "severity": "critical",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "identifier_collision"
+        ],
+        "should_abstain": false,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0009000002"
+      },
+      "response": {
+        "case_id": "case-89f695330553",
+        "status": "flagged",
+        "answer": "Identifier inconsistency detected.",
+        "normalized_value": null,
+        "unit": null,
+        "company_identifier": "0009000002",
+        "fiscal_period": "2020-12-31",
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-89bbb1fc93",
+            "value": 11100000000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000002",
+            "value": null,
+            "detail": "ticker/name resolves to Bravo Test Corp (CIK 0009000002)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000004",
+            "value": null,
+            "detail": "cik resolves to Delta Test Corp (CIK 0009000004)"
+          }
+        ],
+        "explanation": "ticker TSTB resolves to CIK 0009000002 but the record carries CIK 0009000004.",
+        "detected_issue_types": [
+          "identifier_collision"
+        ],
+        "recommended_action": "Hold the record; correct the identifier mapping and re-verify."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 2
+    },
+    {
+      "case_id": "case-947519eb016d",
+      "category": "MISSING_DATA",
+      "subtype": "missing_value",
+      "severity": "medium",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "insufficient_evidence"
+        ],
+        "expected_issue_types": [
+          "missing_input"
+        ],
+        "should_abstain": true,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": null
+      },
+      "response": {
+        "case_id": "case-947519eb016d",
+        "status": "insufficient_evidence",
+        "answer": "No reference observation available for this period.",
+        "normalized_value": null,
+        "unit": null,
+        "company_identifier": "0009000001",
+        "fiscal_period": "2021-12-31",
+        "confidence": 0.85,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-d186d0837f",
+            "value": null,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000001",
+            "value": null,
+            "detail": "ticker/name resolves to Alpha Test Corp (CIK 0009000001)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000001",
+            "value": null,
+            "detail": "cik resolves to Alpha Test Corp (CIK 0009000001)"
+          }
+        ],
+        "explanation": "The reference store has no net_income observation for TSTA period ending 2021-12-31; the record cannot be verified.",
+        "detected_issue_types": [
+          "missing_input"
+        ],
+        "recommended_action": "Request the source filing or abstain from using this value."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": null,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": true,
+        "abstain_expected": true,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 3
+    },
+    {
+      "case_id": "case-9553f08031d5",
+      "category": "CLEAN_CONTROL",
+      "subtype": "optional_field_missing",
+      "severity": "low",
+      "smoke": true,
+      "expected": {
+        "is_error": false,
+        "expected_statuses": [
+          "verified"
+        ],
+        "expected_issue_types": [],
+        "should_abstain": false,
+        "expected_value": 46800000000.0,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0009000008"
+      },
+      "response": {
+        "case_id": "case-9553f08031d5",
+        "status": "verified",
+        "answer": "Value matches the reference observation.",
+        "normalized_value": 46800000000.0,
+        "unit": "USD",
+        "company_identifier": "0009000008",
+        "fiscal_period": "2020-12-31",
+        "confidence": 0.97,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-9ef37a8b0c",
+            "value": 46800000000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000008",
+            "value": null,
+            "detail": "ticker/name resolves to Hotel Test Corp (CIK 0009000008)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000008",
+            "value": null,
+            "detail": "cik resolves to Hotel Test Corp (CIK 0009000008)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "b079b5654872fc7dd313e6a4",
+            "value": 46800000000.0,
+            "detail": "SEC 10-K 0009000008-22-000001 filed 2022-02-15"
+          }
+        ],
+        "explanation": "After unit normalization the value equals the SEC-reported total_assets for the period within 0.5%.",
+        "detected_issue_types": [],
+        "recommended_action": "No action required."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": true,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": false,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 4
+    },
+    {
+      "case_id": "case-982d730141d2",
+      "category": "MISSING_DATA",
+      "subtype": "unverifiable_period",
+      "severity": "medium",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "insufficient_evidence"
+        ],
+        "expected_issue_types": [
+          "missing_input"
+        ],
+        "should_abstain": true,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": null
+      },
+      "response": {
+        "case_id": "case-982d730141d2",
+        "status": "insufficient_evidence",
+        "answer": "No reference observation available for this period.",
+        "normalized_value": null,
+        "unit": null,
+        "company_identifier": "0009000006",
+        "fiscal_period": "2021-12-31",
+        "confidence": 0.85,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-fb79a3840c",
+            "value": 793500000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000006",
+            "value": null,
+            "detail": "ticker/name resolves to Foxtrot Test Corp (CIK 0009000006)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000006",
+            "value": null,
+            "detail": "cik resolves to Foxtrot Test Corp (CIK 0009000006)"
+          }
+        ],
+        "explanation": "The reference store has no net_income observation for TSTF period ending 2021-12-31; the record cannot be verified.",
+        "detected_issue_types": [
+          "missing_input"
+        ],
+        "recommended_action": "Request the source filing or abstain from using this value."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": null,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": true,
+        "abstain_expected": true,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 3
+    },
+    {
+      "case_id": "case-b27c370397be",
+      "category": "CLEAN_CONTROL",
+      "subtype": "valid_thousands_label",
+      "severity": "low",
+      "smoke": true,
+      "expected": {
+        "is_error": false,
+        "expected_statuses": [
+          "verified"
+        ],
+        "expected_issue_types": [],
+        "should_abstain": false,
+        "expected_value": 5700000000.0,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0009000005"
+      },
+      "response": {
+        "case_id": "case-b27c370397be",
+        "status": "verified",
+        "answer": "Value matches the reference observation.",
+        "normalized_value": 5700000000.0,
+        "unit": "USD",
+        "company_identifier": "0009000005",
+        "fiscal_period": "2020-12-31",
+        "confidence": 0.97,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-1cb106d292",
+            "value": 5700000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000005",
+            "value": null,
+            "detail": "ticker/name resolves to Echo Test Corp (CIK 0009000005)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000005",
+            "value": null,
+            "detail": "cik resolves to Echo Test Corp (CIK 0009000005)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "5f9133cc8a8ce7d15b97bb81",
+            "value": 5700000000.0,
+            "detail": "SEC 10-K 0009000005-22-000001 filed 2022-02-15"
+          }
+        ],
+        "explanation": "After unit normalization the value equals the SEC-reported revenue for the period within 0.5%.",
+        "detected_issue_types": [],
+        "recommended_action": "No action required."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": true,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": false,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 4
+    },
+    {
+      "case_id": "case-bdc640cd1645",
+      "category": "PERIOD_SHIFT",
+      "subtype": "label_prior_year",
+      "severity": "critical",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "period_mismatch"
+        ],
+        "should_abstain": false,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0009000006"
+      },
+      "response": {
+        "case_id": "case-bdc640cd1645",
+        "status": "flagged",
+        "answer": "Reporting-period mismatch detected.",
+        "normalized_value": 34500000000.0,
+        "unit": "USD",
+        "company_identifier": "0009000006",
+        "fiscal_period": "2020-12-31",
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-e2d90d94a9",
+            "value": 39675000000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000006",
+            "value": null,
+            "detail": "ticker/name resolves to Foxtrot Test Corp (CIK 0009000006)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000006",
+            "value": null,
+            "detail": "cik resolves to Foxtrot Test Corp (CIK 0009000006)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "935218ea69ae18a0fd4b3013",
+            "value": 34500000000.0,
+            "detail": "SEC 10-K 0009000006-22-000001 filed 2022-02-15"
+          },
+          {
+            "source": "reference_store",
+            "ref": "643dbb1e96c5f876154970ad",
+            "value": 39675000000.0,
+            "detail": "same value is reported for period ending 2021-12-31"
+          }
+        ],
+        "explanation": "The stated value equals the total_assets for the period ending 2021-12-31, not 2020-12-31.",
+        "detected_issue_types": [
+          "period_mismatch"
+        ],
+        "recommended_action": "Correct the fiscal period before use."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 5
+    },
+    {
+      "case_id": "case-c1998a6332bb",
+      "category": "CONTRADICTION",
+      "subtype": "unit_inconsistency",
+      "severity": "medium",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "unit_inconsistency"
+        ],
+        "should_abstain": false,
+        "expected_value": 8000000000.0,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": null
+      },
+      "response": {
+        "case_id": "case-c1998a6332bb",
+        "status": "flagged",
+        "answer": "Feeds use inconsistent unit labels.",
+        "normalized_value": 8000000000.0,
+        "unit": "USD",
+        "company_identifier": "0009000008",
+        "fiscal_period": "2019-12-31",
+        "confidence": 0.88,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-a863a793ad",
+            "value": 8000000000.0,
+            "detail": "feed_A says 8000000000.0 USD"
+          },
+          {
+            "source": "input_record",
+            "ref": "rec-ec30f33435",
+            "value": 8000000.0,
+            "detail": "feed_B says 8000000.0 USDthousands"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000008",
+            "value": null,
+            "detail": "ticker/name resolves to Hotel Test Corp (CIK 0009000008)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000008",
+            "value": null,
+            "detail": "cik resolves to Hotel Test Corp (CIK 0009000008)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "25dd2b0b589ee5e860855ee9",
+            "value": 8000000000.0,
+            "detail": "SEC 10-K 0009000008-21-000001"
+          }
+        ],
+        "explanation": "The feeds agree after unit normalization but label the same value with different units.",
+        "detected_issue_types": [
+          "unit_inconsistency"
+        ],
+        "recommended_action": "Standardize unit labels at the source."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": true,
+        "identity_ok": null,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 5
+    },
+    {
+      "case_id": "case-c42f828a7841",
+      "category": "PERIOD_SHIFT",
+      "subtype": "label_prior_year",
+      "severity": "critical",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "period_mismatch"
+        ],
+        "should_abstain": false,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0009000007"
+      },
+      "response": {
+        "case_id": "case-c42f828a7841",
+        "status": "flagged",
+        "answer": "Reporting-period mismatch detected.",
+        "normalized_value": 700000000.0,
+        "unit": "USD",
+        "company_identifier": "0009000007",
+        "fiscal_period": "2019-12-31",
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-a00695d9d4",
+            "value": 812000000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000007",
+            "value": null,
+            "detail": "ticker/name resolves to Golf Test Corp (CIK 0009000007)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000007",
+            "value": null,
+            "detail": "cik resolves to Golf Test Corp (CIK 0009000007)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "6fdc7580d72a9ab0bbc259c3",
+            "value": 700000000.0,
+            "detail": "SEC 10-K 0009000007-21-000001 filed 2021-02-15"
+          },
+          {
+            "source": "reference_store",
+            "ref": "4da59aa21e166d7a2a077626",
+            "value": 812000000.0,
+            "detail": "same value is reported for period ending 2020-12-31"
+          }
+        ],
+        "explanation": "The stated value equals the net_income for the period ending 2020-12-31, not 2019-12-31.",
+        "detected_issue_types": [
+          "period_mismatch"
+        ],
+        "recommended_action": "Correct the fiscal period before use."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 5
+    },
+    {
+      "case_id": "case-d56a5d1857f9",
+      "category": "PERIOD_SHIFT",
+      "subtype": "label_prior_year",
+      "severity": "critical",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "period_mismatch"
+        ],
+        "should_abstain": false,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0009000003"
+      },
+      "response": {
+        "case_id": "case-d56a5d1857f9",
+        "status": "flagged",
+        "answer": "Reporting-period mismatch detected.",
+        "normalized_value": 336000000.0,
+        "unit": "USD",
+        "company_identifier": "0009000003",
+        "fiscal_period": "2020-12-31",
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-c73cb4f20b",
+            "value": 376320000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000003",
+            "value": null,
+            "detail": "ticker/name resolves to Charlie Test Corp (CIK 0009000003)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000003",
+            "value": null,
+            "detail": "cik resolves to Charlie Test Corp (CIK 0009000003)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "fa599ecfe6d2b76c95c122e8",
+            "value": 336000000.0,
+            "detail": "SEC 10-K 0009000003-22-000001 filed 2022-02-15"
+          },
+          {
+            "source": "reference_store",
+            "ref": "adae09ff78a3979290ab058a",
+            "value": 376320000.0,
+            "detail": "same value is reported for period ending 2021-12-31"
+          }
+        ],
+        "explanation": "The stated value equals the net_income for the period ending 2021-12-31, not 2020-12-31.",
+        "detected_issue_types": [
+          "period_mismatch"
+        ],
+        "recommended_action": "Correct the fiscal period before use."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 5
+    },
+    {
+      "case_id": "case-f3f323bb1249",
+      "category": "ID_MISMAP",
+      "subtype": "cik_swap",
+      "severity": "critical",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "identifier_collision"
+        ],
+        "should_abstain": false,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": "0009000001"
+      },
+      "response": {
+        "case_id": "case-f3f323bb1249",
+        "status": "flagged",
+        "answer": "Identifier inconsistency detected.",
+        "normalized_value": null,
+        "unit": null,
+        "company_identifier": "0009000001",
+        "fiscal_period": "2020-12-31",
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-aa3c2de234",
+            "value": 1100000000.0,
+            "detail": "record under review"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000001",
+            "value": null,
+            "detail": "ticker/name resolves to Alpha Test Corp (CIK 0009000001)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000007",
+            "value": null,
+            "detail": "cik resolves to Golf Test Corp (CIK 0009000007)"
+          }
+        ],
+        "explanation": "ticker TSTA resolves to CIK 0009000001 but the record carries CIK 0009000007.",
+        "detected_issue_types": [
+          "identifier_collision"
+        ],
+        "recommended_action": "Hold the record; correct the identifier mapping and re-verify."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": true,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": false,
+        "abstain_expected": false,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 2
+    },
+    {
+      "case_id": "case-f6dcb83857b4",
+      "category": "CONTRADICTION",
+      "subtype": "conflicting_values",
+      "severity": "high",
+      "smoke": true,
+      "expected": {
+        "is_error": true,
+        "expected_statuses": [
+          "ambiguous",
+          "flagged"
+        ],
+        "expected_issue_types": [
+          "conflicting_sources"
+        ],
+        "should_abstain": true,
+        "expected_value": null,
+        "expected_unit": "USD",
+        "exact_value": false,
+        "expected_company_identifier": null
+      },
+      "response": {
+        "case_id": "case-f6dcb83857b4",
+        "status": "ambiguous",
+        "answer": "Irreconcilable conflict between sources.",
+        "normalized_value": null,
+        "unit": null,
+        "company_identifier": "0009000004",
+        "fiscal_period": "2019-12-31",
+        "confidence": 0.6,
+        "evidence": [
+          {
+            "source": "input_record",
+            "ref": "rec-d94a6fadfd",
+            "value": 4000000000.0,
+            "detail": "feed_A says 4000000000.0 USD"
+          },
+          {
+            "source": "input_record",
+            "ref": "rec-8165f723b7",
+            "value": 3520000000.0,
+            "detail": "feed_B says 3520000000.0 USD"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000004",
+            "value": null,
+            "detail": "ticker/name resolves to Delta Test Corp (CIK 0009000004)"
+          },
+          {
+            "source": "reference_store",
+            "ref": "CIK0009000004",
+            "value": null,
+            "detail": "cik resolves to Delta Test Corp (CIK 0009000004)"
+          }
+        ],
+        "explanation": "Two sources report different values for the same company, concept and period, and the reference store cannot adjudicate.",
+        "detected_issue_types": [
+          "conflicting_sources"
+        ],
+        "recommended_action": "Escalate to a data steward; do not publish either value."
+      },
+      "score": {
+        "status_ok": true,
+        "issue_ok": true,
+        "numeric_ok": null,
+        "identity_ok": null,
+        "evidence_ok": true,
+        "invented_value": false,
+        "passed": true,
+        "predicted_issue": true,
+        "abstained": true,
+        "abstain_expected": true,
+        "rubric": {
+          "evidence_relevance": 1.0,
+          "factual_consistency": 1.0,
+          "reasoning_completeness": 1.0
+        }
+      },
+      "root_cause": null,
+      "agent_error": null,
+      "tool_calls": 5
+    }
+  ]
+}

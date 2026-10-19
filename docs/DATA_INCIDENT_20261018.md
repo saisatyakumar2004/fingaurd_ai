@@ -1,0 +1,6 @@
+# Data incident found at the start of the Ollama session (2026-10-18)
+The validator reported 66 findings instead of 64: DQ011 said UnitedHealth net income and total assets were missing. Investigation:
+- `data/reference.duckdb` had been rewritten at 05:22-05:29 UTC with only 9,138 observations; UNH held 14 revenue rows. `ingestion_summary.json` showed an `--offline` run that failed for MRK: **Merck's raw snapshot body file (`companyfacts_CIK0000310158/...json`) was missing** (only its `.meta.json` remained) - found by `python -m src.ingestion.verify`.
+- I did not make either change. The gate worked as designed (DQ011 flagged the incomplete store; nothing was suppressed).
+- Recovery (all steps recorded): backed up the damaged DB (`data/reference_snapshot_found_incomplete_20261018.duckdb`); re-ran offline normalisation from the preserved raw snapshots (restored 9,373 observations); re-fetched Merck live - the new file has the **identical SHA-256** (`de2e92301923...`) as the lost one, so the original content is proven restored; moved the orphan meta file to `data/raw/_quarantine/`; `ingestion.verify` -> 0 problems; validator -> 64 findings, 0 confirmed errors.
+- Pre-change code backup: `D:\lseg\backups\pre_ollama_20261018_221308.zip`. The project folder is not a Git repository, so no branch was created.

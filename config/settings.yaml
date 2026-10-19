@@ -1,0 +1,78 @@
+paths:
+  db: data/reference.duckdb
+  raw: data/raw
+  normalized: data/normalized
+  corrupted: data/corrupted
+  cache: data/cache
+  reports: reports
+
+sec:
+  # SEC fair-access maximum is 10 requests/second; we default far below that.
+  min_request_interval_seconds: 0.25
+  timeout_seconds: 30
+  max_retries: 4
+  min_period_year: 2019          # ignore facts for periods ending before this year
+  allowed_forms: ["10-K", "10-K/A", "10-Q", "10-Q/A"]
+  annual_days: [350, 380]
+  quarterly_days: [80, 100]
+
+gleif:
+  min_request_interval_seconds: 0.5
+  timeout_seconds: 30
+  max_retries: 4
+  page_size: 10
+
+openfigi:
+  # Limits are from the OpenFIGI v3 docs as understood at authoring time -- re-check
+  # https://www.openfigi.com/api/documentation before relying on them.
+  batch_size_no_key: 10
+  batch_size_with_key: 100
+  min_interval_no_key: 2.5       # ~25 requests / minute
+  min_interval_with_key: 0.25    # ~25 requests / 6 seconds
+  timeout_seconds: 30
+  max_retries: 5
+  exch_code: US
+
+quality:
+  allowed_units: ["USD"]
+  yoy_max_ratio: 4.0             # DQ010 flags year-over-year change beyond x4 or /4
+  block_on: ["critical"]         # confirmed errors of these severities block evaluation
+
+corruption:
+  seed: 42
+  suite_version: v1
+  cases_per_category: 20
+  smoke_per_category: 4
+
+evaluation:
+  relative_tolerance: 0.005
+  high_confidence_threshold: 0.8
+  calibration_bins: 10
+  severity_weights: {critical: 10, high: 5, medium: 3, low: 1}
+
+agent:
+  prompt_version: v2
+  max_tool_steps: 8        # lookup x2, observations, compare, instrument, + final + one corrective re-ask
+
+llm:                       # real-model generation settings; every key can be overridden by FINGUARD_* env vars (see .env.example)
+  max_output_tokens: 700
+  temperature: 0.0
+  seed: 42
+  num_ctx: 4096          # honoured by --provider ollama (native API); set OLLAMA_CONTEXT_LENGTH for --provider openai
+  connect_timeout_seconds: 10
+  read_timeout_seconds: 300
+  json_mode: true
+  max_attempts: 3
+  timeout_retries: 1
+  max_tool_result_chars: 3500
+  keep_alive: 10m
+
+regression:
+  baseline_name: default
+  max_overall_accuracy_drop: 0.02
+  max_category_accuracy_drop: 0.05
+  max_recall_drop: 0.05
+  max_fpr_increase: 0.02
+  max_high_conf_wrong_increase: 0
+  critical_categories: [ID_MISMAP, PERIOD_SHIFT]
+  max_new_failures_critical: 0

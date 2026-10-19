@@ -1,0 +1,50 @@
+n,issue_id,rule,severity,record,label,reason
+1,9e2b2d18e6b845dc,DQ002,low,CIK0001341439/revenue/annual/2021-05-31/0000950170-23-028914,false_positive,"same value reported under two XBRL tags in one filing = equivalent observation, not a duplicate error"
+2,49703c08dbd458ff,DQ002,low,CIK0001090727/revenue/quarterly/2021-09-30/0001090727-21-000042,false_positive,"same value reported under two XBRL tags in one filing = equivalent observation, not a duplicate error"
+3,bd2ed8c42d80a03f,DQ002,low,CIK0001403161/net_income/quarterly/2019-03-31/0001403161-19-000017,false_positive,"same value reported under two XBRL tags in one filing = equivalent observation, not a duplicate error"
+4,14d340368215af33,DQ002,low,CIK0001403161/net_income/quarterly/2021-12-31/0001403161-23-000013,false_positive,"same value reported under two XBRL tags in one filing = equivalent observation, not a duplicate error"
+5,20e248ac1be342fa,DQ002,low,CIK0000797468/net_income/quarterly/2019-03-31/0000797468-20-000010,false_positive,"same value reported under two XBRL tags in one filing = equivalent observation, not a duplicate error"
+6,f85a80696e469a05,DQ002,low,CIK0000066740/revenue/quarterly/2020-03-31/0001558370-21-004896,false_positive,"same value reported under two XBRL tags in one filing = equivalent observation, not a duplicate error"
+7,2e62544b87f76eb5,DQ002,low,CIK0001403161/net_income/annual/2022-09-30/0001403161-23-000099,false_positive,"same value reported under two XBRL tags in one filing = equivalent observation, not a duplicate error"
+8,b0bf83062c289745,DQ002,low,CIK0000909832/revenue/quarterly/2021-05-09/0000909832-22-000014,false_positive,"same value reported under two XBRL tags in one filing = equivalent observation, not a duplicate error"
+9,1a05561d3d82d0f9,DQ002,low,CIK0000909832/revenue/annual/2023-09-03/0000909832-25-000101,false_positive,"same value reported under two XBRL tags in one filing = equivalent observation, not a duplicate error"
+10,e9b76d3d601a3d8a,DQ002,low,CIK0000909832/net_income/quarterly/2022-11-20/0000909832-22-000035,false_positive,"same value reported under two XBRL tags in one filing = equivalent observation, not a duplicate error"
+11,62097e50e4827de6,DQ002,low,CIK0000066740/revenue/annual/2020-12-31/0000066740-23-000014,false_positive,"same value reported under two XBRL tags in one filing = equivalent observation, not a duplicate error"
+12,13371d4ef211b7f8,DQ002,low,CIK0000909832/revenue/quarterly/2026-02-15/0000909832-26-000029,false_positive,"same value reported under two XBRL tags in one filing = equivalent observation, not a duplicate error"
+13,292961532e75fa88,DQ009,medium,CIK0000797468/revenue/quarterly/2020-03-31,valid_finding,restatement/ambiguity/mapping gap that is real and correctly surfaced
+14,bea767dea9bdb844,DQ009,medium,CIK0000066740/net_income/quarterly/2020-03-31,valid_finding,restatement/ambiguity/mapping gap that is real and correctly surfaced
+15,ba1599be0a80d400,DQ009,medium,CIK0000050863/net_income/quarterly/2024-06-29,false_positive,"NetIncomeLoss vs ProfitLoss / Revenues vs RevenueFromContract... are different measures, not a conflict (precedence resolves)"
+16,22e0e6b29511de3c,DQ009,medium,CIK0001163165/net_income/quarterly/2019-09-30,false_positive,"NetIncomeLoss vs ProfitLoss / Revenues vs RevenueFromContract... are different measures, not a conflict (precedence resolves)"
+17,6d63ca6333783385,DQ009,medium,CIK0000310158/net_income/quarterly/2026-03-31,false_positive,"NetIncomeLoss vs ProfitLoss / Revenues vs RevenueFromContract... are different measures, not a conflict (precedence resolves)"
+18,2aec9a768a9fe441,DQ009,medium,CIK0000080424/net_income/quarterly/2020-09-30,false_positive,"NetIncomeLoss vs ProfitLoss / Revenues vs RevenueFromContract... are different measures, not a conflict (precedence resolves)"
+19,f0db737cc6804281,DQ009,medium,CIK0000731766/net_income/annual/2025-12-31,false_positive,"NetIncomeLoss vs ProfitLoss / Revenues vs RevenueFromContract... are different measures, not a conflict (precedence resolves)"
+20,bc85954636a3891f,DQ009,medium,CIK0000093410/net_income/quarterly/2022-06-30,false_positive,"NetIncomeLoss vs ProfitLoss / Revenues vs RevenueFromContract... are different measures, not a conflict (precedence resolves)"
+21,1b66304faca3c8ff,DQ009,medium,CIK0001163165/net_income/quarterly/2019-03-31,false_positive,"NetIncomeLoss vs ProfitLoss / Revenues vs RevenueFromContract... are different measures, not a conflict (precedence resolves)"
+22,f629d6848d802fec,DQ009,medium,CIK0000093410/revenue/quarterly/2026-06-30,false_positive,"NetIncomeLoss vs ProfitLoss / Revenues vs RevenueFromContract... are different measures, not a conflict (precedence resolves)"
+23,3996e836db530dba,DQ009,medium,CIK0000104169/revenue/quarterly/2025-10-31,false_positive,"NetIncomeLoss vs ProfitLoss / Revenues vs RevenueFromContract... are different measures, not a conflict (precedence resolves)"
+24,6372fa0213cf2592,DQ009,medium,CIK0000104169/revenue/quarterly/2022-04-30,false_positive,"NetIncomeLoss vs ProfitLoss / Revenues vs RevenueFromContract... are different measures, not a conflict (precedence resolves)"
+25,fef16df44687d428,DQ009,medium,CIK0000012927/net_income/quarterly/2021-06-30,false_positive,"NetIncomeLoss vs ProfitLoss / Revenues vs RevenueFromContract... are different measures, not a conflict (precedence resolves)"
+26,1cbc1ba3a6f56d89,DQ009,medium,CIK0000078003/net_income/quarterly/2026-03-29,false_positive,"NetIncomeLoss vs ProfitLoss / Revenues vs RevenueFromContract... are different measures, not a conflict (precedence resolves)"
+27,fc122085e4c4c927,DQ009,medium,CIK0000072971/net_income/quarterly/2019-03-31,false_positive,"NetIncomeLoss vs ProfitLoss / Revenues vs RevenueFromContract... are different measures, not a conflict (precedence resolves)"
+28,ff5e37831c98a6b7,DQ009,medium,CIK0000731766/net_income/quarterly/2020-06-30,false_positive,"NetIncomeLoss vs ProfitLoss / Revenues vs RevenueFromContract... are different measures, not a conflict (precedence resolves)"
+29,7d1fd92ab4989722,DQ009,low,CIK0000066740/revenue/quarterly/2024-03-31,valid_finding,restatement/ambiguity/mapping gap that is real and correctly surfaced
+30,163fd604dbfcf3d1,DQ009,low,CIK0000070858/net_income/quarterly/2025-03-31,valid_finding,restatement/ambiguity/mapping gap that is real and correctly surfaced
+31,45d3457fc6ea80e9,DQ009,low,CIK0000070858/net_income/quarterly/2025-06-30,valid_finding,restatement/ambiguity/mapping gap that is real and correctly surfaced
+32,146d348652c56784,DQ009,low,CIK0000070858/total_assets/quarterly/2025-03-31,valid_finding,restatement/ambiguity/mapping gap that is real and correctly surfaced
+33,b2c9c6aded5b3cdd,DQ009,low,CIK0000070858/total_assets/annual/2024-12-31,valid_finding,restatement/ambiguity/mapping gap that is real and correctly surfaced
+34,2de579ad823e21a5,DQ009,low,CIK0000821189/total_assets/annual/2020-12-31,valid_finding,restatement/ambiguity/mapping gap that is real and correctly surfaced
+35,553693402be9890b,DQ009,low,CIK0000078003/revenue/quarterly/2020-09-27,valid_finding,restatement/ambiguity/mapping gap that is real and correctly surfaced
+36,87d8af343ed977f3,DQ009,low,CIK0000200406/revenue/quarterly/2023-07-02,valid_finding,restatement/ambiguity/mapping gap that is real and correctly surfaced
+37,95ac8a638fab7c9c,DQ010,medium,aac778abb279a9876b296343,false_positive,net income legitimately swings year to year; ratio test is meaningless for a difference-type concept
+38,42c40512198f30f2,DQ010,medium,8ecf4dda5b9e0b19bd6342d5,false_positive,net income legitimately swings year to year; ratio test is meaningless for a difference-type concept
+39,c46a9233aea72686,DQ010,medium,01dc5eb7ea5eb45ef63e94de,false_positive,net income legitimately swings year to year; ratio test is meaningless for a difference-type concept
+40,ec201f96f233ddbb,DQ010,medium,1c88100c564204e50a50e975,false_positive,net income legitimately swings year to year; ratio test is meaningless for a difference-type concept
+41,d968c66acb5f1a2a,DQ007,medium,CIK0001163165,valid_finding,restatement/ambiguity/mapping gap that is real and correctly surfaced
+42,6ff220133515d42b,DQ007,medium,CIK0001090727,valid_finding,restatement/ambiguity/mapping gap that is real and correctly surfaced
+43,a14b4cedf69c306d,DQ007,medium,CIK0000200406,valid_finding,restatement/ambiguity/mapping gap that is real and correctly surfaced
+44,ca3b97b7c4ee831b,DQ007,low,CIK0000087347,valid_finding,restatement/ambiguity/mapping gap that is real and correctly surfaced
+45,f952dec16f6e2835,DQ007,low,CIK0000093410,valid_finding,restatement/ambiguity/mapping gap that is real and correctly surfaced
+46,8e0ca15fb98aa977,DQ006,low,CIK0000063908,false_positive,name normalisation defect (apostrophe) - fixed
+47,d838fa102daa9a62,DQ006,low,CIK0000087347,valid_finding,restatement/ambiguity/mapping gap that is real and correctly surfaced
+48,33ac5269310e2aa3,DQ011,medium,CIK0000895421/revenue,valid_finding,restatement/ambiguity/mapping gap that is real and correctly surfaced
+49,6d40129b2f038429,DQ011,medium,CIK0000886982/revenue,valid_finding,restatement/ambiguity/mapping gap that is real and correctly surfaced

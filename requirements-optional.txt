@@ -1,0 +1,3 @@
+# Optional extras (not needed for the core pipeline or the offline test suite)
+streamlit>=1.30      # dashboard/app.py
+anthropic>=0.40      # real LLM adapter (src/agent/llm_agent.py -> AnthropicProvider)
